@@ -315,7 +315,7 @@
             { "command": "find_under_expand", "caption": "Виділити слово" },
             { "command": "expand_selection_to_paragraph", "caption": "Виділити абзац" },
             { "command": "expand_selection", "args": {"to": "scope"}, "caption": "Виділити до рамок" },
-            { "command": "expand_selection", "args": {"to": "brackets"}, "caption": "Виділити до скобок" },
+            { "command": "expand_selection", "args": {"to": "brackets"}, "caption": "Виділити до дужок" },
             { "command": "expand_selection", "args": {"to": "indentation"}, "caption": "Виділити до відступа" },
             { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Виділити до тегу" }
         ]
@@ -698,7 +698,7 @@
                 ]
             },
             { "caption": "-" },
-            { "command": "move_to", "args": {"to": "brackets"}, "caption": "Перейти до парної скоби" }
+            { "command": "move_to", "args": {"to": "brackets"}, "caption": "Перейти до парної дужки" }
         ]
     },
     {
