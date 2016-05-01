@@ -160,18 +160,18 @@
             { "command": "paste_from_history", "caption": "Вставити з історії" },
             { "caption": "-" },
             {
-                "caption": "Строчка", "mnemonic": "L",
+                "caption": "Рядок", "mnemonic": "L",
                 "id": "line",
                 "children":
                 [
                     { "command": "indent", "caption": "Збільшити відступ" },
                     { "command": "unindent", "caption": "Зменшити відступ" },
                     { "command": "reindent", "caption": "Розставити правильні відступи", "args": {"single_line": true} },
-                    { "command": "swap_line_up", "caption": "Пересунути строку вгору" },
-                    { "command": "swap_line_down", "caption": "Пересунути строку вниз" },
-                    { "command": "duplicate_line", "caption": "Копіювати строку" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Видалити строку" },
-                    { "command": "join_lines", "caption": "Об'єднати' строки" }
+                    { "command": "swap_line_up", "caption": "Пересунути рядок вгору" },
+                    { "command": "swap_line_down", "caption": "Пересунути рядок вниз" },
+                    { "command": "duplicate_line", "caption": "Копіювати рядок" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Видалити рядок" },
+                    { "command": "join_lines", "caption": "Об'єднати рядки" }
                 ]
             },
             {
@@ -188,14 +188,14 @@
                 "id": "text",
                 "children":
                 [
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Вставити строку попереду поточної строки" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Вставити строку після поточної строки" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Вставити рядок попереду поточного" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Вставити рядок після поточного" },
                     { "caption": "-" },
                     { "command": "delete_word", "args": { "forward": true }, "caption": "Видалити слово після каретки" },
                     { "command": "delete_word", "args": { "forward": false }, "caption": "Видалити слово перед кареткою" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Видалити строку" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "Видалити від курсора до кінця строки" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "Видалити від курсра до початку строки" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Видалити рядок" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "Видалити від курсора до кінця рядка" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "Видалити від курсра до початку рядка" },
                     { "caption": "-" },
                     { "command": "transpose", "caption": "Поміняти місцями" }
                 ]
@@ -218,7 +218,7 @@
                     { "command": "set_mark", "caption": "Встановити мітку" },
                     { "command": "select_to_mark", "caption": "Виділити текст до мітки", "caption": "Виділити до мітки" },
                     { "command": "delete_to_mark", "caption": "Видалити текст до мітки", "caption": "Видалити до мітки" },
-                    { "command": "swap_with_mark", "caption": "Поміняти місцями строку з міткою та поточну строку", "caption": "Помінятись з міткою" },
+                    { "command": "swap_with_mark", "caption": "Поміняти місцями рядок з міткою та поточний рядок", "caption": "Помінятись з міткою" },
                     { "command": "clear_bookmarks", "caption": "Видалити закладки", "args": {"name": "mark"}, "caption": "Видалити мітку" },
                     { "caption": "-" },
                     { "command": "yank" }
@@ -273,10 +273,10 @@
             { "command": "auto_complete", "caption": "Показати перелік автодоповнення" },
             { "caption": "-", "id": "permute" },
 
-            { "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "Сортувати строки", "mnemonic": "S" },
-            { "command": "sort_lines", "args": {"case_sensitive": true}, "caption": "Сортувати строки (з урахуванням регістру)" },
+            { "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "Сортувати рядки", "mnemonic": "S" },
+            { "command": "sort_lines", "args": {"case_sensitive": true}, "caption": "Сортувати рядки (з урахуванням регістру)" },
             {
-                "caption": "Упорядкувати строки",
+                "caption": "Упорядкувати рядки",
                 "children":
                 [
                     { "command": "permute_lines", "args": {"operation": "reverse"}, "caption": "У зворотньому порядку" },
@@ -304,14 +304,14 @@
         "id": "selection",
         "children":
         [
-            { "command": "split_selection_into_lines", "caption": "Розділити по строкам" },
-            { "command": "select_lines", "args": {"forward": false}, "caption": "Додати попередню строку" },
-            { "command": "select_lines", "args": {"forward": true}, "caption": "Додати наступну строку" },
+            { "command": "split_selection_into_lines", "caption": "Розділити по срядкам" },
+            { "command": "select_lines", "args": {"forward": false}, "caption": "Додати попередній рядок" },
+            { "command": "select_lines", "args": {"forward": true}, "caption": "Додати наступний рядок" },
             { "command": "single_selection", "caption": "Відмінити множинне виділення" },
             { "command": "invert_selection", "caption": "Інвертувати виділення" },
             { "caption": "-" },
             { "command": "select_all", "caption": "Виділити все" },
-            { "command": "expand_selection", "args": {"to": "line"}, "caption": "Виділити строку" },
+            { "command": "expand_selection", "args": {"to": "line"}, "caption": "Виділити рядок" },
             { "command": "find_under_expand", "caption": "Виділити слово" },
             { "command": "expand_selection_to_paragraph", "caption": "Виділити абзац" },
             { "command": "expand_selection", "args": {"to": "scope"}, "caption": "Виділити до рамок" },
@@ -417,7 +417,7 @@
                         }
                     },
                     {
-                        "caption": "4 столбця",
+                        "caption": "4 стовпця",
                         "command": "set_layout",
                         "args":
                         {
@@ -427,7 +427,7 @@
                         }
                     },
                     {
-                        "caption": "2 строки",
+                        "caption": "2 рядки",
                         "command": "set_layout",
                         "args":
                         {
@@ -437,7 +437,7 @@
                         }
                     },
                     {
-                        "caption": "3 строки",
+                        "caption": "3 рядки",
                         "command": "set_layout",
                         "args":
                         {
@@ -564,7 +564,7 @@
                 ]
             },
             {
-                "caption": "Формат кінця строк",
+                "caption": "Формат кінця рядка",
                 "mnemonic": "n",
                 "id": "line_endings",
                 "children":
@@ -575,9 +575,9 @@
                 ]
             },
             { "caption": "-", "id": "settings" },
-            { "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "Перенос строк", "mnemonic": "w", "checkbox": true },
+            { "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "Перенос рядків", "mnemonic": "w", "checkbox": true },
             {
-                "caption": "Ширина строк",
+                "caption": "Ширина рядків",
                 "children":
                 [
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Автоматична", "checkbox": true },
@@ -624,7 +624,7 @@
             { "command": "goto_symbol_in_project", "caption": "Перейти до ідентифікатора в проекті…" },
             { "command": "goto_definition", "caption": "Перейти до визначення…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Перейти к слову…" },
-            { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Перейти до строки…" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Перейти до рядка…" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "На попередню позицію" },
             { "command": "jump_forward", "caption": "На наступну позицію" },
@@ -663,8 +663,8 @@
                 "children":
                 [
                     { "command": "show_at_center", "caption": "Прокрутити до виділеного" },
-                    { "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "На строку вгору" },
-                    { "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "На строку вниз" }
+                    { "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "На рядок вгору" },
+                    { "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "На рядок вниз" }
                 ]
             },
             {
