@@ -194,8 +194,8 @@
                     { "command": "delete_word", "args": { "forward": true }, "caption": "Видалити слово після каретки" },
                     { "command": "delete_word", "args": { "forward": false }, "caption": "Видалити слово перед кареткою" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Видалити рядок" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "Видалити від курсора до кінця рядка" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "Видалити від курсра до початку рядка" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "Видалити від курсору до кінця рядка" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "Видалити від курсору до початку рядка" },
                     { "caption": "-" },
                     { "command": "transpose", "caption": "Поміняти місцями" }
                 ]
@@ -206,7 +206,7 @@
                 "children":
                 [
                     { "command": "close_tag", "caption": "Закрити тег" },
-                    { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Двиділити до тега" },
+                    { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Виділити до позначки" },
                     { "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" }, "caption": "Обернути виділення тегом" }
                 ]
             },
@@ -304,7 +304,7 @@
         "id": "selection",
         "children":
         [
-            { "command": "split_selection_into_lines", "caption": "Розділити по срядкам" },
+            { "command": "split_selection_into_lines", "caption": "Розділити по рядкам" },
             { "command": "select_lines", "args": {"forward": false}, "caption": "Додати попередній рядок" },
             { "command": "select_lines", "args": {"forward": true}, "caption": "Додати наступний рядок" },
             { "command": "single_selection", "caption": "Відмінити множинне виділення" },
@@ -339,8 +339,8 @@
             { "command": "find_under_expand", "caption": "Швидко додати наступне" },
             { "command": "find_under_expand_skip", "caption": "Швидко пропустити наступне", "platform": "!OSX" },
             { "caption": "-" },
-            { "command": "slurp_find_string", "caption": "Викоритовувати виділене для пошуку" },
-            { "command": "slurp_replace_string", "caption": "Викоритовувати виділене для заміни" },
+            { "command": "slurp_find_string", "caption": "Викориcтовувати виділене для пошуку" },
+            { "command": "slurp_replace_string", "caption": "Викориcтовувати виділене для заміни" },
             { "caption": "-" },
             { "command": "show_panel", "caption": "Показати/Сховати консоль", "args": {"panel": "find_in_files"}, "caption": "Знайти у файлах…" },
             {
@@ -378,7 +378,7 @@
             { "command": "show_panel", "caption": "Показати/Сховати консоль", "args": {"panel": "console", "toggle": true} },
             { "caption": "-", "id": "full_screen" },
             { "command": "toggle_full_screen", "caption": "Переключити режим повноекранного перегляду" },
-            { "command": "toggle_distraction_free", "caption": "Переключити відволіченний режим" },
+            { "command": "toggle_distraction_free", "caption": "Переключити в зосереджений режим" },
             { "caption": "-", "id": "groups" },
             {
                 "caption": "Розділення екрану",
@@ -397,7 +397,7 @@
                         }
                     },
                     {
-                        "caption": "2 столбця",
+                        "caption": "2 стовпця",
                         "command": "set_layout",
                         "args":
                         {
@@ -407,7 +407,7 @@
                         }
                     },
                     {
-                        "caption": "3 столбця",
+                        "caption": "3 стовпця",
                         "command": "set_layout",
                         "args":
                         {
@@ -473,31 +473,31 @@
                     { "caption": "-" },
 
                     {
-                        "caption": "Максимум столбців: 1",
+                        "caption": "Максимум стовбців: 1",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 1 }
                     },
                     {
-                        "caption": "Максимум столбців: 2",
+                        "caption": "Максимум стовбців: 2",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 2 }
                     },
                     {
-                        "caption": "Максимум столбців: 3",
+                        "caption": "Максимум стовбців: 3",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 3 }
                     },
                     {
-                        "caption": "Максимум столбців: 4",
+                        "caption": "Максимум стовбців: 4",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 4 }
                     },
                     {
-                        "caption": "Максимум столбців: 5",
+                        "caption": "Максимум стовбців: 5",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 5 }
@@ -546,7 +546,7 @@
                 "id": "indentation",
                 "children":
                 [
-                    { "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "Викоритовувати у відступах пробіли", "checkbox": true },
+                    { "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "Викориcтовувати у відступах пробіли", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Розмір відступу: 1", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Розмір відступу: 2", "checkbox": true },
@@ -593,13 +593,13 @@
                 "caption": "Вертикальна границя",
                 "children":
                 [
-                    { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "Нет", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "Ні", "checkbox": true },
                     { "caption": "-" },
-                    { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70 символов", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78 символов", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80 символов", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100 символов", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "rulers", "value": [120]}, "caption": "120 символов", "checkbox": true }
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70 символів", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78 символів", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80 символів", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100 символів", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [120]}, "caption": "120 символів", "checkbox": true }
                 ]
             },
             { "caption": "-" },
@@ -708,7 +708,7 @@
         "children":
         [
             { "command": "show_overlay", "args": {"overlay": "command_palette"}, "caption": "Командна панель…" },
-            { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "Сніппети" },
+            { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "Сніпети" },
             { "caption": "-", "id": "build" },
             {
                 "caption": "Система збірки",
@@ -732,20 +732,20 @@
             },
             { "command": "build", "caption": "Створити", "mnemonic": "B" },
             { "command": "build", "caption": "Створити", "args": {"variant": "Run"}, "mnemonic": "R" },
-            { "command": "exec", "args": {"kill": true}, "caption": "Відмінити стврення", "mnemonic": "C" },
+            { "command": "exec", "args": {"kill": true}, "caption": "Відмінити створення", "mnemonic": "C" },
             {
-                "caption": "Результати стврення",
+                "caption": "Результати створення",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "show_panel", "caption": "Показати/Сховати консоль", "args": {"panel": "output.exec"}, "caption": "Показати результати стврення", "mnemonic": "S" },
+                    { "command": "show_panel", "caption": "Показати/Сховати консоль", "args": {"panel": "output.exec"}, "caption": "Показати результати створення", "mnemonic": "S" },
                     { "command": "next_result", "caption": "Наступний результат", "mnemonic": "N" },
                     { "command": "prev_result", "caption": "Попередній результат", "mnemonic": "P" }
                 ]
             },
             { "command": "toggle_save_all_on_build", "caption": "Зберегти все після створення", "mnemonic": "A", "checkbox": true },
             { "caption": "-", "id": "macros" },
-            { "command": "toggle_record_macro", "caption": "Почати/Зупинити запис макроса", "mnemonic": "M" },
+            { "command": "toggle_record_macro", "caption": "Почати/Зупинити запис макросу", "mnemonic": "M" },
             { "command": "run_macro", "caption": "Запустити макрос", "mnemonic": "P" },
             { "command": "save_macro", "caption": "Зберегти макрос…", "mnemonic": "v" },
             {
@@ -754,7 +754,7 @@
             },
             { "caption": "-" },
             { "command": "new_plugin", "caption": "Новий плагін…" },
-            { "command": "new_snippet", "caption": "Новий сніппет…" },
+            { "command": "new_snippet", "caption": "Новий сніпет…" },
             { "caption": "-", "id": "end" }
         ]
     },
@@ -788,7 +788,7 @@
             { "command": "close_workspace", "caption": "Закрити проект", "mnemonic": "C" },
             { "command": "open_file", "args": {"file": "${project}"}, "caption": "Редагувати проект" },
             { "caption": "-" },
-            { "command": "new_window_for_project", "caption": "Новий робочий простір для проекта" },
+            { "command": "new_window_for_project", "caption": "Новий робочий простір для проекту" },
             { "command": "save_workspace_as", "caption": "Зберегти робочий простір як...", "mnemonic": "A" },
             { "caption": "-" },
             { "command": "prompt_add_folder", "caption": "Додати теку в проект…", "mnemonic": "d" },
