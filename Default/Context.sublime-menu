@@ -1,5 +1,8 @@
 [
-    { "command": "copy", "caption": "Копіювати" },
+    { "command": "open_context_url", "caption": "Відкрити контекстну URL" },
+    { "command": "context_goto_definition", "caption": "Перейти до визначення" },
+    { "caption": "-", "id": "Буфер обміну" },
+	{ "command": "copy", "caption": "Копіювати" },
     { "command": "cut", "caption": "Вирізати" },
     { "command": "paste", "caption": "Вставити" },
     { "caption": "-", "id": "selection" },

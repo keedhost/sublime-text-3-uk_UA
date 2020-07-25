@@ -133,7 +133,8 @@
             { "command": "revert", "caption": "Перезавантажити файл", "mnemonic": "v" },
             { "command": "close_all", "caption": "Закрити всі файли" },
             { "caption": "-", "id": "exit" },
-            { "command": "exit", "caption": "Вихід", "mnemonic": "x" }
+            { "command": "exit", "caption": "Вихід", "caption": "Вихід", "mnemonic": "x", "platform": "Windows" },
+            { "command": "exit", "caption": "Вихід", "caption": "Вийти", "mnemonic": "Q", "platform": "Linux" }, 			  
         ]
     },
     {
@@ -264,6 +265,7 @@
                 [
                     { "command": "wrap_lines", "caption": "Обмежити текст по лінійці" },
                     { "command": "wrap_lines", "args": {"width": 70}, "caption": "Обмежити текст 70 знаками" },
+					{ "command": "wrap_lines", "args": {"width": 72}, "caption": "Обмежити текст 72 знаками" },   
                     { "command": "wrap_lines", "args": {"width": 78}, "caption": "Обмежити текст 78 знаками" },
                     { "command": "wrap_lines", "args": {"width": 80}, "caption": "Обмежити текст 80 знаками" },
                     { "command": "wrap_lines", "args": {"width": 100}, "caption": "Обмежити текст 100 знаками" },
@@ -583,7 +585,8 @@
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Автоматична", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70 символів", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78 символів", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 72}, "caption": "72 символів", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78 символів", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80 символів", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100 символів", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 120}, "caption": "120 символів", "checkbox": true }
@@ -596,6 +599,7 @@
                     { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "Ні", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70 символів", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "rulers", "value": [72]}, "caption": "72 символа", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78 символів", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80 символів", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100 символів", "checkbox": true },
@@ -623,7 +627,8 @@
             { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Перейти до ідентифікатора…" },
             { "command": "goto_symbol_in_project", "caption": "Перейти до ідентифікатора в проекті…" },
             { "command": "goto_definition", "caption": "Перейти до визначення…" },
-            // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Перейти к слову…" },
+			{ "command": "goto_reference", "caption": "Перейти до згадки…" },
+            // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Перейти до слова…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Перейти до рядка…" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "На попередню позицію" },
@@ -725,6 +730,11 @@
                     { "command": "set_build_system", "args": {"index": 5}, "checkbox": true },
                     { "command": "set_build_system", "args": {"index": 6}, "checkbox": true },
                     { "command": "set_build_system", "args": {"index": 7}, "checkbox": true },
+					{ "command": "set_build_system", "args": {"index": 8}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 9}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 10}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 11}, "checkbox": true },
+                    { "caption": "-" },
                     { "command": "$build_systems" },
                     { "caption": "-" },
                     { "command": "new_build_system", "caption": "Нова система збірки..." }
@@ -753,8 +763,21 @@
                 "children": [ { "command": "$macros" } ]
             },
             { "caption": "-" },
-            { "command": "new_plugin", "caption": "Новий плагін…" },
-            { "command": "new_snippet", "caption": "Новий сніпет…" },
+            {
+                "caption": "Розробник",
+                "children":
+                [
+					{ "command": "new_plugin", "caption": "Новий плагін…" },
+					{ "command": "new_snippet", "caption": "Новий сніпет…" },
+					{ "command": "new_syntax", "caption": "Новий синтаксис…" },
+                    { "command": "convert_syntax", "caption": "Конвертувати синтаксис" },
+                    { "caption": "-" },
+                    { "command": "profile_plugins", "caption": "Дані щодо подій плагінів" },
+                    { "caption": "-" },
+                    { "command": "show_scope_name", "caption": "Показати назву області" },
+                ]
+            },
+            { "command": "install_package_control", "caption": "Установити Package Control…" },
             { "caption": "-", "id": "end" }
         ]
     },
@@ -799,17 +822,42 @@
     {
         "caption": "Опції",
         "mnemonic": "n",
-        "id": "preferences",
+        "id": "Preferences",
         "children":
         [
             { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Перегляд плагінів…", "mnemonic": "B" },
             { "caption": "-" },
-            { "command": "open_file", "args": {"file": "${packages}/Default/Preferences.sublime-settings"}, "caption": "Налаштування - за замовчуванням" },
+            {
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Preferences.sublime-settings",
+                    "default": "// Налаштування тут замінять визначені у \"Default/Preferences.sublime-settings\",\n// і змінюються в свою чергу налаштуваннями, що залежать від синтаксису.\n{\n\t$0\n}\n"
+                },
+                "caption": "Налаштування за замовчуванням"
+			},
+			{ "command": "edit_syntax_settings", "caption": "Налаштування для синтаксису" },
+            {
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Distraction Free.sublime-settings",
+                    "default": "{\n\t$0\n}\n"
+                },
+                "caption": "Налаштування для режиму відволікання"
+            },
+			{
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Default ($platform).sublime-keymap",
+                    "default": "[\n\t$0\n]\n"
+                },
+                "caption": "Гарячі клавіші по замовчуванню"
+            },
+            { "caption": "-" },
             {
                 "command": "open_file", "args":
                 {
                     "file": "${packages}/User/Preferences.sublime-settings",
-                    "contents": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by file type specific settings.\n{\n\t$0\n}\n"
+                    "contents": "// Налаштування тут перепишуть визначені у \"Default/Preferences.sublime-settings\",\n// і змінюються в свою чергу за специфічними параметрами типу файлу.\n{\n\t$0\n}\n"
                 },
                 "caption": "Налаштування - Користувача"
             },
@@ -832,13 +880,6 @@
             {
                 "command": "open_file", "args":
                 {
-                    "file": "${packages}/Default/Default ($platform).sublime-keymap"
-                },
-                "caption": "Гарячі клавіші - По замовчуванню"
-            },
-            {
-                "command": "open_file", "args":
-                {
                     "file": "${packages}/User/Default ($platform).sublime-keymap",
                     "contents": "[\n\t$0\n]\n"
                 },
@@ -846,20 +887,24 @@
             },
             { "caption": "-" },
             {
+                "caption": "Схема кольорів…",
+                "command": "select_color_scheme"
+            },
+            {
+                "caption": "Тема…",
+                "command": "select_theme"
+            },
+			{
                 "caption": "Розмір тексту",
-                "children":
+			"children":
                 [
                     { "command": "increase_font_size", "caption": "Більший" },
                     { "command": "decrease_font_size", "caption": "Менший" },
                     { "caption": "-" },
                     { "command": "reset_font_size", "caption": "Скинути" }
                 ]
-            },
-            {
-                "caption": "Кольорова схема",
-                "children": [ { "command": "$color_schemes" } ]
-            }
-        ]
+            },            
+		]
     },
     {
         "caption": "Довідка",
@@ -871,11 +916,15 @@
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
             { "command": "open_url", "args": {"url": "https://github.com/keedhost/sublime-text-3-uk_UA"}, "caption": "Сторінка українського перекладу" },
             { "caption": "-" },
+			{ "command": "show_progress_window", "caption": "Статус индексації…" },
+			{ "caption": "-" },
             { "command": "purchase_license", "caption": "Придбати ліцензію"},
+			{ "command": "upgrade_license", "caption": "Покращити ліцензію"},
             { "command": "show_license_window", "caption": "Ввести ліцензію" },
             { "command": "remove_license", "caption": "Видалити ліцензію"},
             { "caption": "-" },
             { "command": "update_check", "caption": "Перевірити наявність оновлень…", "platform": "!Linux" },
+			{ "command": "show_changelog", "caption": "Список змін…" },															
             { "command": "show_about_window", "caption": "Про програму...", "mnemonic": "A" }
         ]
     }
